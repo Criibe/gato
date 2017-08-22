@@ -230,7 +230,7 @@ public class Juego extends javax.swing.JFrame {
     
     public void dibujarTablero(){
         
-        getContentPane().setBackground(new Color(0,188,212)); 
+        getContentPane().setBackground(new Color(200,188,212)); 
 
         empate=0;
         Cuadro6.setText("");
