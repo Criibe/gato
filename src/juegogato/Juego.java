@@ -288,14 +288,17 @@ public class Juego extends javax.swing.JFrame {
                         if(tirarJugadorUno)
                             verificarSiGana(Cuadro6, jugadorUno);
                         else{
-                            if(isPc==true){
-                                jugarPc();
-                            }
-                            else verificarSiGana(Cuadro6, jugadorDos);
+
+                            verificarSiGana(Cuadro6, jugadorDos);
                         }
+                        
+                        
+                        if(isPc==true){
+                                jugarPc();
+                            }else   tirarJugadorUno = !tirarJugadorUno; 
                             
                                                    
-                        tirarJugadorUno = !tirarJugadorUno; 
+                      
                         isPressedC6 = true;
                         
                     }
@@ -311,13 +314,13 @@ public class Juego extends javax.swing.JFrame {
                         if(tirarJugadorUno)
                             verificarSiGana(Cuadro7, jugadorUno);
                         else{
-                            if(isPc==true){
-                                jugarPc();
-                            }
-                            else verificarSiGana(Cuadro7, jugadorDos);
+                             verificarSiGana(Cuadro7, jugadorDos);
                         }
                         
-                        tirarJugadorUno = !tirarJugadorUno; 
+                        if(isPc==true){
+                                jugarPc();
+                            }
+                        else tirarJugadorUno = !tirarJugadorUno; 
                         isPressedC7 = true;
                     }
                 }  
@@ -332,14 +335,15 @@ public class Juego extends javax.swing.JFrame {
                         if(tirarJugadorUno)
                             verificarSiGana(Cuadro8, jugadorUno);
                         else{
-                            if(isPc==true){
+                            verificarSiGana(Cuadro8, jugadorDos);
+                        }
+                        if(isPc==true){
                                 jugarPc();
                             }
-                            else verificarSiGana(Cuadro8, jugadorDos);
-                        }
-                        
+                            else tirarJugadorUno = !tirarJugadorUno; 
                         isPressedC8 = true;
-                        tirarJugadorUno = !tirarJugadorUno; 
+                        
+
 
                     }
                 }  
@@ -354,15 +358,16 @@ public class Juego extends javax.swing.JFrame {
                         if(tirarJugadorUno)
                             verificarSiGana(Cuadro1, jugadorUno);
                         else{
-                            if(isPc==true){
-                                jugarPc();
-                            }
-                            else verificarSiGana(Cuadro1, jugadorDos);
+                            verificarSiGana(Cuadro1, jugadorDos);
                         
                         }
+                        if(isPc==true){
+                                jugarPc();
+                                 verificarSiGana(Cuadro1, jugadorDos);
+                            }
+                        else tirarJugadorUno = !tirarJugadorUno; 
                         
-                        isPressedC1 = true;
-                        tirarJugadorUno = !tirarJugadorUno; 
+                         isPressedC1 = true;
 
                     }
                 }  
@@ -379,14 +384,16 @@ public class Juego extends javax.swing.JFrame {
                        if(tirarJugadorUno)
                             verificarSiGana(Cuadro4, jugadorUno);
                        else{
-                           if(isPc==true){
-                                jugarPc();
-                            }
-                           else  verificarSiGana(Cuadro4, jugadorDos);
+                            verificarSiGana(Cuadro4, jugadorDos);
                        }
                         
-                        isPressedC4 = true;
-                        tirarJugadorUno = !tirarJugadorUno; 
+                       
+                        if(isPc==true){
+                                jugarPc();
+                            }
+                           else tirarJugadorUno = !tirarJugadorUno; 
+                        
+                         isPressedC4 = true;
 
                     }
                 }  
@@ -402,15 +409,18 @@ public class Juego extends javax.swing.JFrame {
                         if(tirarJugadorUno)
                             verificarSiGana(Cuadro2, jugadorUno);
                         else{
-                            if(isPc==true){
-                                jugarPc();
-                            }
-                            else verificarSiGana(Cuadro2, jugadorDos);
+                            
+                         verificarSiGana(Cuadro2, jugadorDos);
                                 
+
                         }
                         
                         isPressedC2 = true;
-                        tirarJugadorUno = !tirarJugadorUno; 
+                        if(isPc==true){
+                                jugarPc();
+                        }
+                            else
+                                 tirarJugadorUno = !tirarJugadorUno; 
 
                     }
                 }  
@@ -426,15 +436,15 @@ public class Juego extends javax.swing.JFrame {
                         if(tirarJugadorUno)
                             verificarSiGana(Cuadro5, jugadorUno);
                         else{
-                            if(isPc==true){
-                                jugarPc();
-                            }
-                            else verificarSiGana(Cuadro5, jugadorDos);
+                             verificarSiGana(Cuadro5, jugadorDos);
                         }
                         
                         
                         isPressedC5 = true;
-                        tirarJugadorUno = !tirarJugadorUno; 
+                            if(isPc==true){
+                                jugarPc();
+                            }
+                            else  tirarJugadorUno = !tirarJugadorUno; 
                     }
                 }  
                 }); 
@@ -449,14 +459,17 @@ public class Juego extends javax.swing.JFrame {
                         if(tirarJugadorUno)
                             verificarSiGana(Cuadro3, jugadorUno);
                         else{
-                            if(isPc==true){
-                                jugarPc();
-                            }
-                            else verificarSiGana(Cuadro3, jugadorDos);
+                            verificarSiGana(Cuadro3, jugadorDos);
                         }
                         
-                        isPressedC3 = true;
-                        tirarJugadorUno = !tirarJugadorUno; 
+                      
+                        if(isPc==true){
+                                jugarPc();
+                            }
+                            else tirarJugadorUno = !tirarJugadorUno; 
+                        
+                          isPressedC3 = true;
+                        
                     }
                 }  
                 }); 
@@ -478,7 +491,11 @@ public class Juego extends javax.swing.JFrame {
                         }
                         
                         isPressedC9 = true;
-                        tirarJugadorUno = !tirarJugadorUno; 
+                        
+               if(isPc==true){
+                                jugarPc();
+                            }
+                            else tirarJugadorUno = !tirarJugadorUno; 
                     }
                 }  
                 }); 
